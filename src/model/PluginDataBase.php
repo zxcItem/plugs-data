@@ -8,6 +8,13 @@ use think\admin\Model;
 
 class PluginDataBase extends Model
 {
+    const CATES = [
+        'text'  => '文本数据',
+        'image' => '图片文件',
+        'video' => '视频文件',
+        ''
+    ];
+
     /**
      * 日志名称
      * @var string
@@ -44,7 +51,6 @@ class PluginDataBase extends Model
     public static function types(bool $simple = false): array
     {
         $types = static::mk()->where(['deleted' => 0])->distinct()->column('type');
-        if (empty($types) && empty($simple)) $types = ['身份权限'];
         return $types;
     }
 
