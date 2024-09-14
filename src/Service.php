@@ -27,7 +27,7 @@ class Service extends Plugin
 
 
     /**
-     * 签到模块菜单配置
+     * 菜单配置
      * @return array[]
      */
     public static function menu(): array
